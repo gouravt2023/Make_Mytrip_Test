@@ -22,8 +22,6 @@ public class HomePageTest extends BaseTest {
         landingPage.enterPersonalDetails();
     }
 
-    @Test
-
 }
 
 
