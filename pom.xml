@@ -4,11 +4,19 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
   <groupId>Make_Mytrip_Test</groupId>
   <artifactId>Make_Mytrip_Test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>Make_Mytrip</name>
+=======
+  <groupId>indigotest</groupId>
+  <artifactId>zoodtest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>indigoframeworkdesign</name>
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -26,12 +34,15 @@
       <artifactId>selenium-java</artifactId>
       <version>4.25.0</version>
     </dependency>
+<<<<<<< HEAD
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.30</version> <!-- Latest Version -->
       <scope>provided</scope>
     </dependency>
+=======
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
@@ -56,7 +67,15 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<<<<<<< HEAD
 
+=======
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.9.2</version>
+    </dependency>
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
@@ -88,11 +107,19 @@
   </dependencies>
   
   <profiles>
+<<<<<<< HEAD
   <!--<profile>
   <id>Regression</id>
   
   <build>
     <pluginManagement>
+=======
+  <profile>
+  <id>Regression</id>
+  
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
       <plugins>
       
       <plugin>
@@ -109,8 +136,84 @@
        </pluginManagement>
          </build>
   
+<<<<<<< HEAD
   </profile> -->
 
+=======
+  </profile>
+  
+   <profile>
+  <id>Purchase</id>
+  
+   
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M6</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/Purchase.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+       </pluginManagement>
+         </build>
+  
+  </profile>
+  
+    <profile>
+  <id>CucumberTests</id>
+  
+   
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M6</version>
+        <configuration>
+          <includes>
+            <include>**/TestNGTestRunner.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+      </plugins>
+       </pluginManagement>
+         </build>
+  
+  </profile>
+  
+  <profile>
+  <id>ErrorValidation</id>
+   
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M6</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/ErrorValidationTests.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+      </plugins>
+       </pluginManagement>
+         </build>
+  
+  </profile>
+  
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
   </profiles>
 
   <build>

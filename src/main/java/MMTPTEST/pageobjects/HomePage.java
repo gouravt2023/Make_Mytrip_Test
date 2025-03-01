@@ -70,7 +70,11 @@ public class HomePage extends AbstractComponent{
 		String num=generateMobileNumberUz();
 		mobileinputBox.sendKeys(num);
 		getCode.click();
+<<<<<<< HEAD
 		Thread.sleep(1000);
+=======
+		Thread.sleep(15000);
+>>>>>>> b3b8fee4f468698c56a3c5dfb7606f7d11ea6d78
 
 	}
 
